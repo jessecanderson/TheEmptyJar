@@ -70,11 +70,10 @@ class TimelineTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        let lable = cell.viewWithTag(100) as! UILabel
+        let textlable = cell.viewWithTag(100) as! UILabel
      
         let note = weeklyNotes[indexPath.row]
-        // print("\(note.text)")
-        lable.text = note.value(forKey: "name") as? String
+        textlable.text = note.value(forKey: "name") as? String
 
         return cell
     }
