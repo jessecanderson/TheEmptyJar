@@ -42,6 +42,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
             // coreDataManipulation(noteToSave: notesText, command: .save)
             coreDataManipulation(noteToSave: notesText, timeStamp: timeStamp, command: .save)
             // weeklyNotes[timestamp] = notesText.text
+            print(timeStamp)
             
             // Validate the dictionary has data in it every time an entry is made.
             // print("\(weeklyNotes)")

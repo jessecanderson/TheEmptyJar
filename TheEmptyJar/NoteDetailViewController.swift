@@ -11,8 +11,12 @@ import UIKit
 class NoteDetailViewController: UIViewController {
     
     @IBOutlet weak var noteContents: UILabel!
+    @IBOutlet weak var noteCreatedDateLabel: UILabel!
+    
+    let dateFormatter = DateFormatter()
     
     var expandedNoteContents = String()
+    var noteCreatedDate = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,13 @@ class NoteDetailViewController: UIViewController {
         
         self.navigationController?.isNavigationBarHidden = false
         
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+        noteCreatedDateLabel.text = dateFormatter.string(from: noteCreatedDate)
+        
         noteContents.text = expandedNoteContents
+    
         
         // print("\(expandedNoteContents)")
     }

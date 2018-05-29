@@ -61,6 +61,8 @@ func coreDataManipulation(noteToSave: String?, timeStamp: Date?, command: DataWo
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+        
+        
     }
 }
 

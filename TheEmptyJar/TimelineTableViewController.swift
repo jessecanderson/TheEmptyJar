@@ -150,8 +150,10 @@ class TimelineTableViewController: UITableViewController {
             
             let noteToPass = weeklyNotes[(indexPath?.row)!]
             let noteContents = noteToPass.value(forKey: "name") as? String
+            let noteCreatedDate = noteToPass.value(forKey: "date") as? Date
             
             destinationVC.expandedNoteContents = noteContents!
+            destinationVC.noteCreatedDate = noteCreatedDate!  
             
         }
         
