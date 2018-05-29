@@ -23,7 +23,7 @@ class NoteDetailViewController: UIViewController {
         
         noteContents.text = expandedNoteContents
         
-        print("\(expandedNoteContents)")
+        // print("\(expandedNoteContents)")
     }
 
     override func didReceiveMemoryWarning() {

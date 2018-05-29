@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,36 +24,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-uX-8CT">
-                                <rect key="frame" x="67.5" y="114" width="240" height="302"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-uX-8CT">
+                                <rect key="frame" x="56.5" y="114" width="262.5" height="262"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="LxW-Mh-utT"/>
-                                    <constraint firstAttribute="height" constant="302" id="Wl9-hb-SxI"/>
+                                    <constraint firstAttribute="width" secondItem="p4g-uX-8CT" secondAttribute="height" multiplier="1:1" id="M2q-1W-fm6"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-01-11 at 12.54.07 PM" translatesAutoresizingMaskIntoConstraints="NO" id="uO4-yk-1s3">
-                                <rect key="frame" x="67.5" y="114" width="240" height="302"/>
+                                <rect key="frame" x="56.5" y="114" width="262.5" height="262"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="302" id="PDN-Sx-ZY8"/>
-                                    <constraint firstAttribute="width" constant="240" id="YTA-ve-lfS"/>
+                                    <constraint firstAttribute="width" secondItem="uO4-yk-1s3" secondAttribute="height" multiplier="1:1" id="MpV-8f-NZe"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write your moment below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u7-TF-fAx">
-                                <rect key="frame" x="84.5" y="47" width="206" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="206" id="7jD-cn-sKe"/>
-                                    <constraint firstAttribute="height" constant="21" id="8mp-uL-MiK"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write your moment below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u7-TF-fAx">
+                                <rect key="frame" x="56.5" y="47" width="262.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-PL-unk">
-                                <rect key="frame" x="170.5" y="466" width="34" height="30"/>
+                                <rect key="frame" x="170.5" y="426" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveNote:" destination="9pv-A4-QxB" eventType="touchUpInside" id="KRa-IG-BF5"/>
@@ -65,8 +61,11 @@
                             <constraint firstItem="uO4-yk-1s3" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="O04-9v-zjc"/>
                             <constraint firstItem="uO4-yk-1s3" firstAttribute="top" secondItem="2u7-TF-fAx" secondAttribute="bottom" constant="46" id="PMu-CD-lAI"/>
                             <constraint firstItem="p4g-uX-8CT" firstAttribute="top" secondItem="2u7-TF-fAx" secondAttribute="bottom" constant="46" id="WrI-L8-voz"/>
+                            <constraint firstItem="uO4-yk-1s3" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.7" id="YEy-KY-ghv"/>
                             <constraint firstItem="ef1-PL-unk" firstAttribute="top" relation="lessThanOrEqual" secondItem="p4g-uX-8CT" secondAttribute="bottom" constant="50" id="hRk-a5-ZgW"/>
+                            <constraint firstItem="2u7-TF-fAx" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.7" id="mSl-De-DSl"/>
                             <constraint firstItem="ef1-PL-unk" firstAttribute="top" secondItem="uO4-yk-1s3" secondAttribute="bottom" constant="50" id="mcZ-d4-dhd"/>
+                            <constraint firstItem="p4g-uX-8CT" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.7" id="nfP-kl-PpZ"/>
                             <constraint firstItem="p4g-uX-8CT" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sU4-3G-vze"/>
                             <constraint firstItem="2u7-TF-fAx" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="27" id="xAR-dP-v7v"/>
                         </constraints>
@@ -100,7 +99,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Support: TheEmptyJar@icode.guru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11s-Ci-hnf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Support: TheEmptyJar@tally.codes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11s-Ci-hnf">
                                 <rect key="frame" x="16" y="101" width="269" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -214,17 +213,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-01-11 at 12.54.07 PM" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-wD-51S">
-                                <rect key="frame" x="67.5" y="134" width="240" height="302"/>
+                                <rect key="frame" x="56.5" y="134" width="262.5" height="262"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="TDQ-uI-dfv"/>
-                                    <constraint firstAttribute="height" constant="302" id="lg6-UX-26f"/>
+                                    <constraint firstAttribute="width" secondItem="TBA-wD-51S" secondAttribute="height" multiplier="1:1" id="qXx-8P-ifx"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mW-dZ-das">
-                                <rect key="frame" x="67.5" y="134" width="240" height="302"/>
+                                <rect key="frame" x="56.5" y="134" width="262.5" height="262"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="IVA-yv-aDZ"/>
-                                    <constraint firstAttribute="height" constant="302" id="YET-9h-4EO"/>
+                                    <constraint firstAttribute="width" secondItem="8mW-dZ-das" secondAttribute="height" multiplier="1:1" id="vub-Dj-wHm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -235,6 +232,8 @@
                         <constraints>
                             <constraint firstItem="8mW-dZ-das" firstAttribute="centerX" secondItem="8bD-qy-SJW" secondAttribute="centerX" id="fCG-mx-bAn"/>
                             <constraint firstItem="TBA-wD-51S" firstAttribute="top" secondItem="T8X-la-Qr8" secondAttribute="bottom" constant="70" id="guW-2q-DW9"/>
+                            <constraint firstItem="8mW-dZ-das" firstAttribute="width" secondItem="8bD-qy-SJW" secondAttribute="width" multiplier="0.7" id="hLa-CX-M5d"/>
+                            <constraint firstItem="TBA-wD-51S" firstAttribute="width" secondItem="8bD-qy-SJW" secondAttribute="width" multiplier="0.7" id="jjQ-7g-Siq"/>
                             <constraint firstItem="8mW-dZ-das" firstAttribute="top" secondItem="T8X-la-Qr8" secondAttribute="bottom" constant="70" id="kup-HO-UWJ"/>
                             <constraint firstItem="TBA-wD-51S" firstAttribute="centerX" secondItem="8bD-qy-SJW" secondAttribute="centerX" id="wfQ-d1-SuC"/>
                         </constraints>

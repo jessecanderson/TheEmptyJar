@@ -10,9 +10,7 @@
 		6A3711A51E3023C40010E202 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3711A41E3023C40010E202 /* NoteDetailViewController.swift */; };
 		6A3C5E061E2C0D2600CC2A60 /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C5E041E2C0D2600CC2A60 /* NotesModel.xcdatamodeld */; };
 		6A3C5E081E2C144A00CC2A60 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C5E071E2C144A00CC2A60 /* NotesModel.swift */; };
-		6A3C5E0B1E2D534400CC2A60 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3C5E0A1E2D534400CC2A60 /* CoreData.framework */; };
 		6A6218E31E36E8C40012569E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6218E21E36E8C40012569E /* Assets.xcassets */; };
-		6AE7E4641E2E538900DEA5E4 /* CoreData.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C5E0A1E2D534400CC2A60 /* CoreData.framework */; };
 		6AFB6C2A1E26A49200188DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6C291E26A49200188DC5 /* AppDelegate.swift */; };
 		6AFB6C2C1E26A49200188DC5 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6C2B1E26A49200188DC5 /* NotesViewController.swift */; };
 		6AFB6C311E26A49200188DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFB6C2F1E26A49200188DC5 /* Main.storyboard */; };
@@ -24,7 +22,6 @@
 		6A3711A41E3023C40010E202 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		6A3C5E051E2C0D2600CC2A60 /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
 		6A3C5E071E2C144A00CC2A60 /* NotesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
-		6A3C5E0A1E2D534400CC2A60 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6A6218E21E36E8C40012569E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AFB6C261E26A49200188DC5 /* TheEmptyJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheEmptyJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFB6C291E26A49200188DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A3C5E0B1E2D534400CC2A60 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +46,6 @@
 		6A3C5E091E2D534400CC2A60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A3C5E0A1E2D534400CC2A60 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,7 +111,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jesse Anderson";
 				TargetAttributes = {
 					6AFB6C251E26A49200188DC5 = {
@@ -150,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AE7E4641E2E538900DEA5E4 /* CoreData.framework in Resources */,
 				6AFB6C361E26A49200188DC5 /* LaunchScreen.storyboard in Resources */,
 				6A6218E31E36E8C40012569E /* Assets.xcassets in Resources */,
 				6AFB6C311E26A49200188DC5 /* Main.storyboard in Resources */,
@@ -208,6 +202,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -215,6 +210,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -241,7 +237,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -264,6 +260,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -271,6 +268,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -291,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -307,10 +305,11 @@
 				DEVELOPMENT_TEAM = 4L32T76JN9;
 				INFOPLIST_FILE = TheEmptyJar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = guru.icode.TheEmptyJar;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.tally.TheEmptyJar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,10 +320,11 @@
 				DEVELOPMENT_TEAM = 4L32T76JN9;
 				INFOPLIST_FILE = TheEmptyJar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = guru.icode.TheEmptyJar;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.tally.TheEmptyJar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

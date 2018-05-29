@@ -44,7 +44,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
             // weeklyNotes[timestamp] = notesText.text
             
             // Validate the dictionary has data in it every time an entry is made.
-            print("\(weeklyNotes)")
+            // print("\(weeklyNotes)")
         } else {
             let message = "You didn't write a note, please go back and include a note for this week!"
             let alert = UIAlertController(title: "Empty Note", message: message, preferredStyle: .alert)

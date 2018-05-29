@@ -61,7 +61,6 @@ func coreDataManipulation(noteToSave: String?, timeStamp: Date?, command: DataWo
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-
     }
 }
 
@@ -80,44 +79,6 @@ func deleteEntry(indexPath: Int) {
     }
 
 }
-
-    
-//func save(noteToSave: String) {
-//    
-//    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//    
-//    let managedContext = appDelegate?.persistentContainer.viewContext
-//    
-//    let entity = NSEntityDescription.entity(forEntityName: "Note", in: managedContext!)!
-//    
-//    let note = NSManagedObject(entity: entity, insertInto: managedContext)
-//    
-//    note.setValue(noteToSave, forKeyPath: "name")
-//    
-//    do {
-//        try managedContext?.save()
-//        weeklyNotes.append(note)
-//    } catch let error as NSError {
-//        print("Could not save. \(error), \(error.userInfo)")
-//    }
-//    
-//}
-//
-//
-//func load() {
-//    
-//    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//    
-//    let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    
-//    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Note")
-//    
-//    do {
-//        weeklyNotes = try managedContext.fetch(fetchRequest)
-//    } catch let error as NSError {
-//        print("Could not fetch. \(error), \(error.userInfo)")
-//    }
-//}
 
 
 

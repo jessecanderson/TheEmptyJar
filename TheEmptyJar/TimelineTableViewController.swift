@@ -97,7 +97,7 @@ class TimelineTableViewController: UITableViewController {
             weeklyNotes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
-            print("\(indexPath.row)")
+            // print("\(indexPath.row)")
             
         }   
     }
