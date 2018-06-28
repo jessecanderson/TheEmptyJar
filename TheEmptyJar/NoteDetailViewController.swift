@@ -36,12 +36,13 @@ class NoteDetailViewController: UIViewController {
         // print("\(expandedNoteContents)")
     }
 
+    //[REVIEW] - If you don't implement a function delete it
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    //[REVIEW] - Same as above
     /*
     // MARK: - Navigation
 

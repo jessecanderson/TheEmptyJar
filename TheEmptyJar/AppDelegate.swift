@@ -43,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    //[REVIEW] - This belongs into a separate file
+    
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
