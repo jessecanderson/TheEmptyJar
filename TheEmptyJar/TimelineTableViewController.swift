@@ -54,6 +54,8 @@ class TimelineTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    //[REVIEW] - If you don't add mutliple sections you can delete this entire function
+    // Also, delete the #warning line. Just to make clear that you implemented the function properly
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -143,12 +145,17 @@ class TimelineTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        //[REVIEW] - Another String!
         if segue.identifier == "noteDetailSegue" {
+            
+            //[REVIEW] - Force unwrapping is bad!!!
             let destinationVC = segue.destination as! NoteDetailViewController
             
             let indexPath = self.tableView.indexPathForSelectedRow
             
             let noteToPass = weeklyNotes[(indexPath?.row)!]
+            
             let noteContents = noteToPass.value(forKey: "name") as? String
             let noteCreatedDate = noteToPass.value(forKey: "date") as? Date
             

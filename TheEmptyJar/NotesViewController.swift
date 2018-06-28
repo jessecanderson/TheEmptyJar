@@ -47,10 +47,14 @@ class NotesViewController: UIViewController, UITextViewDelegate {
             // Validate the dictionary has data in it every time an entry is made.
             // print("\(weeklyNotes)")
         } else {
+            //[REVIEW] - Something like this is a good opportunity for an extension on UIViewController
             let message = "You didn't write a note, please go back and include a note for this week!"
-            let alert = UIAlertController(title: "Empty Note", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Go Back", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let title = "Empty Note"
+            showAlert(withTitle: title, message: message)
+            
+//            let alert = UIAlertController(title: "Empty Note", message: message, preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Go Back", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
         }
         
         notesText.text = ""
@@ -61,3 +65,14 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     
 }
     
+//Just another example. You could for example add another argument for the button title.
+extension UIViewController {
+    func showAlert(withTitle title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+}
+ 
+ 
+
