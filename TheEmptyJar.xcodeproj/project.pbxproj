@@ -11,7 +11,10 @@
 		6A3C5E061E2C0D2600CC2A60 /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C5E041E2C0D2600CC2A60 /* NotesModel.xcdatamodeld */; };
 		6A3C5E081E2C144A00CC2A60 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C5E071E2C144A00CC2A60 /* NotesModel.swift */; };
 		6A6218E31E36E8C40012569E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6218E21E36E8C40012569E /* Assets.xcassets */; };
-		6AFB6C2A1E26A49200188DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6C291E26A49200188DC5 /* AppDelegate.swift */; };
+		6AC13D952658B09D00DF9911 /* AppDelegate.old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC13D912658B03000DF9911 /* AppDelegate.old.swift */; };
+		6ACA2D282658AC0100A8090B /* TheEmptyJarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA2D272658AC0100A8090B /* TheEmptyJarApp.swift */; };
+		6ACA2D2A2658AC7600A8090B /* Percistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA2D292658AC7600A8090B /* Percistance.swift */; };
+		6ACA2D2C2658AC8F00A8090B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA2D2B2658AC8F00A8090B /* RootView.swift */; };
 		6AFB6C2C1E26A49200188DC5 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB6C2B1E26A49200188DC5 /* NotesViewController.swift */; };
 		6AFB6C311E26A49200188DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFB6C2F1E26A49200188DC5 /* Main.storyboard */; };
 		6AFB6C361E26A49200188DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFB6C341E26A49200188DC5 /* LaunchScreen.storyboard */; };
@@ -23,8 +26,11 @@
 		6A3C5E051E2C0D2600CC2A60 /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
 		6A3C5E071E2C144A00CC2A60 /* NotesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		6A6218E21E36E8C40012569E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AC13D912658B03000DF9911 /* AppDelegate.old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.old.swift; sourceTree = "<group>"; };
+		6ACA2D272658AC0100A8090B /* TheEmptyJarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheEmptyJarApp.swift; sourceTree = "<group>"; };
+		6ACA2D292658AC7600A8090B /* Percistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Percistance.swift; sourceTree = "<group>"; };
+		6ACA2D2B2658AC8F00A8090B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		6AFB6C261E26A49200188DC5 /* TheEmptyJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheEmptyJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AFB6C291E26A49200188DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AFB6C2B1E26A49200188DC5 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		6AFB6C301E26A49200188DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AFB6C351E26A49200188DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,9 +56,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6AC13D922658B06300DF9911 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA2D2B2658AC8F00A8090B /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6AC13D932658B07400DF9911 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA2D292658AC7600A8090B /* Percistance.swift */,
+				6A3C5E041E2C0D2600CC2A60 /* NotesModel.xcdatamodeld */,
+				6A3C5E071E2C144A00CC2A60 /* NotesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6AC13D942658B08500DF9911 /* OlderFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6AC13D912658B03000DF9911 /* AppDelegate.old.swift */,
+				6AFB6C3D1E26A54E00188DC5 /* TimelineTableViewController.swift */,
+				6A3711A41E3023C40010E202 /* NoteDetailViewController.swift */,
+				6AFB6C2B1E26A49200188DC5 /* NotesViewController.swift */,
+			);
+			path = OlderFiles;
+			sourceTree = "<group>";
+		};
+		6AC13D962658B0BE00DF9911 /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6AFB6C371E26A49200188DC5 /* Info.plist */,
+				6A6218E21E36E8C40012569E /* Assets.xcassets */,
+				6AFB6C341E26A49200188DC5 /* LaunchScreen.storyboard */,
+				6AFB6C2F1E26A49200188DC5 /* Main.storyboard */,
+			);
+			path = SystemFiles;
+			sourceTree = "<group>";
+		};
 		6AFB6C1D1E26A49200188DC5 = {
 			isa = PBXGroup;
 			children = (
+				6ACA2D272658AC0100A8090B /* TheEmptyJarApp.swift */,
 				6AFB6C281E26A49200188DC5 /* TheEmptyJar */,
 				6AFB6C271E26A49200188DC5 /* Products */,
 				6A3C5E091E2D534400CC2A60 /* Frameworks */,
@@ -70,16 +117,10 @@
 		6AFB6C281E26A49200188DC5 /* TheEmptyJar */ = {
 			isa = PBXGroup;
 			children = (
-				6A3C5E071E2C144A00CC2A60 /* NotesModel.swift */,
-				6AFB6C291E26A49200188DC5 /* AppDelegate.swift */,
-				6AFB6C2B1E26A49200188DC5 /* NotesViewController.swift */,
-				6AFB6C2F1E26A49200188DC5 /* Main.storyboard */,
-				6A6218E21E36E8C40012569E /* Assets.xcassets */,
-				6AFB6C341E26A49200188DC5 /* LaunchScreen.storyboard */,
-				6AFB6C371E26A49200188DC5 /* Info.plist */,
-				6AFB6C3D1E26A54E00188DC5 /* TimelineTableViewController.swift */,
-				6A3C5E041E2C0D2600CC2A60 /* NotesModel.xcdatamodeld */,
-				6A3711A41E3023C40010E202 /* NoteDetailViewController.swift */,
+				6AC13D962658B0BE00DF9911 /* SystemFiles */,
+				6AC13D942658B08500DF9911 /* OlderFiles */,
+				6AC13D932658B07400DF9911 /* Model */,
+				6AC13D922658B06300DF9911 /* Views */,
 			);
 			path = TheEmptyJar;
 			sourceTree = "<group>";
@@ -111,20 +152,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Jesse Anderson";
 				TargetAttributes = {
 					6AFB6C251E26A49200188DC5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4L32T76JN9;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 6AFB6C211E26A49200188DC5 /* Build configuration list for PBXProject "TheEmptyJar" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -158,10 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACA2D2C2658AC8F00A8090B /* RootView.swift in Sources */,
 				6A3C5E061E2C0D2600CC2A60 /* NotesModel.xcdatamodeld in Sources */,
-				6AFB6C2A1E26A49200188DC5 /* AppDelegate.swift in Sources */,
+				6ACA2D2A2658AC7600A8090B /* Percistance.swift in Sources */,
+				6AC13D952658B09D00DF9911 /* AppDelegate.old.swift in Sources */,
 				6AFB6C3E1E26A54E00188DC5 /* TimelineTableViewController.swift in Sources */,
 				6AFB6C2C1E26A49200188DC5 /* NotesViewController.swift in Sources */,
+				6ACA2D282658AC0100A8090B /* TheEmptyJarApp.swift in Sources */,
 				6A3C5E081E2C144A00CC2A60 /* NotesModel.swift in Sources */,
 				6A3711A51E3023C40010E202 /* NoteDetailViewController.swift in Sources */,
 			);
@@ -193,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -213,6 +258,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -237,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -271,6 +318,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -289,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -302,13 +350,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4L32T76JN9;
-				INFOPLIST_FILE = TheEmptyJar/Info.plist;
+				INFOPLIST_FILE = TheEmptyJar/SystemFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = codes.tally.TheEmptyJar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -317,13 +366,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4L32T76JN9;
-				INFOPLIST_FILE = TheEmptyJar/Info.plist;
+				INFOPLIST_FILE = TheEmptyJar/SystemFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = codes.tally.TheEmptyJar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

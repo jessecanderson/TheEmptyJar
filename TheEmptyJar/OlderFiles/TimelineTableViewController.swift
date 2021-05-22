@@ -26,7 +26,7 @@ class TimelineTableViewController: UITableViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableData(_:)), name: .reload, object: nil)
         
-        self.refreshControl?.addTarget(self, action: #selector(TimelineTableViewController.handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(TimelineTableViewController.handleRefresh(refreshControl:)), for: UIControl.Event.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,7 +89,7 @@ class TimelineTableViewController: UITableViewController {
 
   
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             
@@ -106,37 +106,11 @@ class TimelineTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let note = weeklyNotes[indexPath.row]
-//        let noteContents = note.value(forKey: "name") as? String
-//        
-//        let destinationVC = NoteDetailViewController()
-//        
-//        destinationVC.expandedNoteContents = noteContents!
-//        
-//        destinationVC.performSegue(withIdentifier: "noteDetailSegue", sender: self)
         
         self.performSegue(withIdentifier: "noteDetailSegue", sender: self)
         
     }
 
- 
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
- 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -153,7 +127,7 @@ class TimelineTableViewController: UITableViewController {
             let noteCreatedDate = noteToPass.value(forKey: "date") as? Date
             
             destinationVC.expandedNoteContents = noteContents!
-            destinationVC.noteCreatedDate = noteCreatedDate!  
+            destinationVC.noteCreatedDate = noteCreatedDate!
             
         }
         

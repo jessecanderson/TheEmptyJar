@@ -17,7 +17,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.bringSubview(toFront: notesText)
+        self.view.bringSubviewToFront(notesText)
         self.notesText.delegate = self
         notesText.text = ""
     }
