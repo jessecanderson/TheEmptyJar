@@ -99,7 +99,6 @@
 		6AFB6C1D1E26A49200188DC5 = {
 			isa = PBXGroup;
 			children = (
-				6ACA2D272658AC0100A8090B /* TheEmptyJarApp.swift */,
 				6AFB6C281E26A49200188DC5 /* TheEmptyJar */,
 				6AFB6C271E26A49200188DC5 /* Products */,
 				6A3C5E091E2D534400CC2A60 /* Frameworks */,
@@ -117,8 +116,9 @@
 		6AFB6C281E26A49200188DC5 /* TheEmptyJar */ = {
 			isa = PBXGroup;
 			children = (
-				6AC13D962658B0BE00DF9911 /* SystemFiles */,
+				6ACA2D272658AC0100A8090B /* TheEmptyJarApp.swift */,
 				6AC13D942658B08500DF9911 /* OlderFiles */,
+				6AC13D962658B0BE00DF9911 /* SystemFiles */,
 				6AC13D932658B07400DF9911 /* Model */,
 				6AC13D922658B06300DF9911 /* Views */,
 			);
